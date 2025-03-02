@@ -129,7 +129,7 @@ class ClickHouseStatement implements Statement
                 )
             );
         } catch (ClickHouseException $exception) {
-            throw new Exception(previous: $exception, sqlState: $exception->getMessage());
+            throw new Exception(previous: $exception, message: $exception->getMessage());
         }
     }
 
